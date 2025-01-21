@@ -1,0 +1,17 @@
+{
+  "name": "gemini",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "@google/generative-ai": "^0.21.0",
+    "@prisma/client": "^6.2.1"
+  }
+}

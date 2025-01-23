@@ -12,6 +12,7 @@
   "dependencies": {
     "@clack/prompts": "^0.9.1",
     "@google/generative-ai": "^0.21.0",
-    "@prisma/client": "^6.2.1"
+    "@prisma/client": "^6.2.1",
+    "inquirer": "^12.3.2"
   }
 }

@@ -13,13 +13,43 @@ import {
     {
       functionDeclarations: [
         {
-          name: "echo-x",
-          description: "belum aku set",
+          name: "reverse-string",
+          description: "Membalikkan urutan karakter dalam string.",
+          parameters: {
+            type: SchemaType.OBJECT,
+            properties: {
+              x1: {
+                type: SchemaType.STRING,
+                enum: ["aaa", "bbb", "ccc"],
+              },
+              x2: {
+                type: SchemaType.STRING,
+                enum: ["1", "2", "3"],
+              },
+              x3: {
+                type: SchemaType.STRING,
+              },
+            },
+          },
+        },
+        {
+          name: "calculate-sum",
+          description: "Menghitung jumlah dari dua angka.",
+        },
+        {
+          name: "fetch-data",
+          description: "Mengambil data dari API eksternal.",
+        },
+        {
+          name: "generate-uuid",
+          description: "Menghasilkan UUID unik baru.",
+        },
+        {
+          name: "parse-json",
+          description:
+            "Menganalisis string JSON dan mengembalikannya sebagai objek.",
         },
       ],
-      codeExecution: () => {
-        console.log("xxx-ai-");
-      },
     },
   ];
 
@@ -75,6 +105,12 @@ import {
         });
       }
     }
+    // process.stdout.write(response.text());
+    // console.log(response.functionCalls());
+    // console.log(response.promptFeedback);
+    // console.log(response.candidates);
+    // console.log(...(await chat.getHistory()));
+
     outro(response.text());
   }
 })().catch(console.error);
